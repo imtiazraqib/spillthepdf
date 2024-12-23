@@ -1,24 +1,11 @@
 import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import Header from "./components/Header";
 
 export default async function Home() {
   return (
     <div>
-      <div className="w-screen h-100">
-        <div className="flex justify-between p-10">
-          <h1 className="text-2xl font-bold">Spill The PDF</h1>
-          <div className="flex space-x-4">
-            <SignedIn>
-              {/* Mount the UserButton component */}
-              <UserButton />
-            </SignedIn>
-            <SignedOut>
-              {/* Signed out users get sign in button */}
-              <SignInButton />
-            </SignedOut>
-          </div>
-        </div>
-      </div>
+      <Header />
       <div className="flex flex-col align-center justify-center">
         <h1 className="text-5xl font-bold text-center">Spill The PDF</h1>
         <div className="flex flex-col items-center mt-2">

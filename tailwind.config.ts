@@ -14,6 +14,11 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["synthwave", "bumblebee"],
+    darkTheme: "synthwave",
+  },
 };
 export default config;

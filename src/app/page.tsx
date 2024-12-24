@@ -1,6 +1,7 @@
-import { SignedOut, SignInButton, SignedIn, UserButton } from "@clerk/nextjs";
+import { SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import Header from "./components/Header";
+import FileUpload from "./components/FileUpload";
 
 export default async function Home() {
   return (
@@ -20,7 +21,7 @@ export default async function Home() {
         </div>
         <div className="flex align-center justify-center mt-4">
           <SignedIn>
-            <h1>File Upload</h1>
+            <FileUpload />
           </SignedIn>
           <SignedOut>
             <Link href="/sign-in">
